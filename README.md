@@ -1,0 +1,2 @@
+vagrant-coreos-cluster-digitalocean
+===================================
