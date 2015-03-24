@@ -1,0 +1,15 @@
+Vagrant.configure('2') do |config|
+
+config.vm.define "jenkins" do |jenkins|
+  config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = 'id_rsa'
+    override.vm.box = 'digital_ocean'
+    provider.hostname = 'jenkins'
+    provider.size = '1GB'
+    provider.client_id = 'YOURCLIENTKEY'
+    provider.image = 'Ubuntu 14.04 x64'
+    provider.api_key = 'YOURAPIKEY'
+  end
+config.vm.provision :shell, :path => "jenkins-installer.sh"
+end
+end
