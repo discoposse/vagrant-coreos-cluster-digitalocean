@@ -1,0 +1,9 @@
+Vagrantfile
+.vagrant/
+id_rsa
+id_rsa.pub
+demokey
+packer_cache/
+*.box
+*.pub
+*.pem
